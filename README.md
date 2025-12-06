@@ -7,7 +7,6 @@ Includes Login, Register, and Welcome pages for a clean user experience.
 
 ## Features
 
-- 🔐 Login page with input validation  
 - ✨ Register page to create a new account  
 - 👋 Welcome page with animations  
 - 📱 Responsive design for different screen sizes  
