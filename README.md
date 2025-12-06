@@ -1,16 +1,33 @@
-# login_ui
+# Flutter Login UI
 
-Flutter UI.
+A modern **Flutter Login & Register UI** project with smooth animations and responsive design.  
+Includes Login, Register, and Welcome pages for a clean user experience.
 
-## Getting Started
+---
 
-This project is a starting point for a Flutter application.
+## Features
 
-A few resources to get you started if this is your first Flutter project:
+- 🔐 Login page with input validation  
+- ✨ Register page to create a new account  
+- 👋 Welcome page with animations  
+- 📱 Responsive design for different screen sizes  
+- 🎨 Clean and simple UI  
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+---
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## Screenshots
+
+<center>
+
+*(Replace with your actual screenshots)*
+
+**Login Page**  
+![Login Page](https://github.com/moexblade/Login_Page/blob/fc75659cf8f4bdf28a4e27cd7d7515186cb8beda/welcome.png)
+
+**Register Page**  
+![Register Page](https://github.com/moexblade/Login_Page/blob/fc75659cf8f4bdf28a4e27cd7d7515186cb8beda/register.png)
+
+**Welcome Page**  
+![Welcome Page](https://github.com/moexblade/Login_Page/blob/fc75659cf8f4bdf28a4e27cd7d7515186cb8beda/login.png)
+
+<center>
