@@ -81,6 +81,10 @@ flutter:
     - family: PlayfairDisplay
       fonts:
         - asset: fonts/PlayfairDisplay-VariableFont_wght.ttf
+    - family: GreatVibes
+      fonts:
+        - asset: fonts/GreatVibes-Regular.ttf
+
   #   - family: Trajan Pro
   #     fonts:
   #       - asset: fonts/TrajanPro.ttf
