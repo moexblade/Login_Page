@@ -2,4 +2,4 @@
 
 Just A simple Flutter login page.
 
-![image_alt]([image_url](https://github.com/moexblade/Login_Page/blob/main/img.png?raw=true))
+![image_alt]([image_url](https://raw.githubusercontent.com/moexblade/Login_Page/refs/heads/main/img.png))
