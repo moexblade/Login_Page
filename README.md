@@ -19,8 +19,6 @@ Includes Login, Register, and Welcome pages for a clean user experience.
 
 <center>
 
-*(Replace with your actual screenshots)*
-
 **Welcome Page**  
 ![Login Page](https://github.com/moexblade/Login_Page/blob/fc75659cf8f4bdf28a4e27cd7d7515186cb8beda/welcome.png)
 
