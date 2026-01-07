@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:login_ui/welcome.dart';
+import 'package:login_ui/features/welcome/presentation/welcome.dart';
 
 void main() {
   runApp(MyApp());

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:login_ui/FadeAnimation.dart';
-import 'register.dart';
-import 'login.dart';
+import 'package:login_ui/common/FadeAnimation.dart';
+import '../../register/presentation/register.dart';
+import '../../login/presentation/login.dart';
 
 class Welcome extends StatelessWidget {
   const Welcome({super.key});
@@ -130,7 +130,7 @@ class Welcome extends StatelessWidget {
                       1.5,
                       Text(
                         "Continue as guest",
-                        style: TextStyle(color: Colors.white, fontFamily: 'PlayfairDisplay'),
+                        style: TextStyle(color: Colors.white, fontFamily: 'PlayfairDisplay', fontSize: 18),
                       ),
                     ),
                   ],

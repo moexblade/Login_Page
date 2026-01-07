@@ -1,14 +1,58 @@
 import 'package:flutter/material.dart';
-import 'package:login_ui/FadeAnimation.dart';
-import 'welcome.dart';
-import 'login.dart';
+import 'package:login_ui/common/FadeAnimation.dart';
+import '../../welcome/presentation/welcome.dart';
+import '../../register/presentation/register.dart';
 
-class Register extends StatelessWidget {
-  const Register({super.key});
+class Login extends StatelessWidget {
+  const Login({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      extendBodyBehindAppBar: true,
+      appBar: AppBar(
+        backgroundColor: Colors.transparent,
+        elevation: 0,
+        automaticallyImplyLeading: false,
+        leadingWidth: 120,
+        leading: TextButton.icon(
+          onPressed: () {
+            Navigator.push(
+              context,
+              PageRouteBuilder(
+                pageBuilder: (context, animation, secondaryAnimation) => Welcome(),
+                transitionsBuilder: (context, animation, secondaryAnimation, child) {
+                  const begin = Offset(-1.0, 0.0);
+                  const end = Offset.zero;
+                  const curve = Curves.ease;
+
+                  var tween =
+                  Tween(begin: begin, end: end).chain(CurveTween(curve: curve));
+                  return SlideTransition(
+                    position: animation.drive(tween),
+                    child: child,
+                  );
+                },
+              ),
+            );
+          },
+          icon: const Icon(
+            Icons.arrow_back_ios_new_rounded,
+            color: Colors.white,
+          ),
+          label: const Text(
+            "Return",
+            style: TextStyle(
+              color: Colors.white,
+              fontSize: 20,
+              fontFamily: 'PlayfairDisplay',
+            ),
+          ),
+          style: TextButton.styleFrom(
+            foregroundColor: Colors.white,
+          ),
+        ),
+      ),
       resizeToAvoidBottomInset: true,
       body: Container(
         width: double.infinity,
@@ -28,22 +72,26 @@ class Register extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Padding(
-                  padding: const EdgeInsets.fromLTRB(20, 50, 20, 0),
+                  padding: const EdgeInsets.fromLTRB(20, 100, 20, 0),
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       FadeAnimation(
                         1,
                         Text(
-                          "Create Account",
-                          style: TextStyle(fontSize: 41, color: Colors.white, fontFamily: 'PlayfairDisplay'),
+                          "Welcome",
+                          style: TextStyle(
+                            fontSize: 41,
+                            color: Colors.white,
+                            fontFamily: 'PlayfairDisplay',
+                          ),
                         ),
                       ),
                       SizedBox(height: 5),
                       FadeAnimation(
                         1.3,
                         Text(
-                          "Join us today!",
+                          "Glad to see you!",
                           style: TextStyle(
                             fontSize: 31,
                             color: Colors.white,
@@ -58,44 +106,21 @@ class Register extends StatelessWidget {
                 Container(
                   margin: EdgeInsets.all(10),
                   decoration: BoxDecoration(
-                    color: Colors.white70,
                     boxShadow: [
                       BoxShadow(
-                          color: Colors.black12.withOpacity(0.2),
-                          blurRadius: 10,
-                          spreadRadius: 0.5,
-                          blurStyle: BlurStyle.outer
+                        color: Colors.black12.withOpacity(0.2),
+                        blurRadius: 10,
+                        spreadRadius: 0.5,
+                        blurStyle: BlurStyle.outer,
                       ),
                     ],
+                    color: Colors.white70,
                     borderRadius: BorderRadius.all(Radius.circular(35)),
                   ),
                   child: Padding(
                     padding: EdgeInsets.all(15),
                     child: Column(
                       children: [
-                        FadeAnimation(
-                          1.4,
-                          GestureDetector(
-                            onTap: (){Navigator.push(context, MaterialPageRoute(builder: (context) => Welcome()));},
-                            child: Row(
-                              mainAxisAlignment: MainAxisAlignment.start,
-                              children: [
-                                Icon(
-                                  Icons.arrow_back_ios,
-                                  size: 21,
-                                  color: Colors.blue,
-                                ),
-                                Text(
-                                  "Return",
-                                  style: TextStyle(
-                                    fontSize: 21,
-                                    color: Colors.blue,
-                                  ),
-                                ),
-                              ],
-                            ),
-                          ),
-                        ),
                         SizedBox(height: 40),
                         FadeAnimation(
                           1.5,
@@ -111,34 +136,14 @@ class Register extends StatelessWidget {
                                   Container(
                                     decoration: BoxDecoration(
                                       border: Border(
-                                        bottom: BorderSide(
-                                          color: Colors.grey,
-                                        ),
+                                        bottom: BorderSide(color: Colors.blue, width: 1.5),
                                       ),
                                     ),
                                     child: TextField(
                                       decoration: InputDecoration(
-                                        hintText: "Username",
+                                        hintText: "Email or Username",
                                         hintStyle: TextStyle(
-                                          color: Colors.grey,
-                                        ),
-                                        border: InputBorder.none,
-                                      ),
-                                    ),
-                                  ),
-                                  Container(
-                                    decoration: BoxDecoration(
-                                      border: Border(
-                                        bottom: BorderSide(
-                                          color: Colors.grey,
-                                        ),
-                                      ),
-                                    ),
-                                    child: TextField(
-                                      decoration: InputDecoration(
-                                        hintText: "Email",
-                                        hintStyle: TextStyle(
-                                          color: Colors.grey,
+                                          color: Colors.blue,
                                         ),
                                         border: InputBorder.none,
                                       ),
@@ -148,15 +153,21 @@ class Register extends StatelessWidget {
                                     obscureText: true,
                                     decoration: InputDecoration(
                                       hintText: "Password",
-                                      hintStyle: TextStyle(
-                                        color: Colors.grey,
-                                      ),
+                                      hintStyle: TextStyle(color: Colors.blue),
                                       border: InputBorder.none,
                                     ),
                                   ),
                                 ],
                               ),
                             ),
+                          ),
+                        ),
+                        SizedBox(height: 30),
+                        FadeAnimation(
+                          1.6,
+                          Text(
+                            "Forgot Password?",
+                            style: TextStyle(color: Colors.blue),
                           ),
                         ),
                         SizedBox(height: 50),
@@ -173,7 +184,7 @@ class Register extends StatelessWidget {
                             child: TextButton(
                               onPressed: () {},
                               child: Text(
-                                "Sign Up",
+                                "Login",
                                 style: TextStyle(
                                   color: Colors.white,
                                   fontSize: 18,
@@ -187,10 +198,17 @@ class Register extends StatelessWidget {
                         FadeAnimation(
                           1.8,
                           GestureDetector(
-                            onTap: (){Navigator.push(context, MaterialPageRoute(builder: (context) => Login()));},
+                            onTap: () {
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                  builder: (context) => Register(),
+                                ),
+                              );
+                            },
                             child: Text(
-                              "I already have an account",
-                              style: TextStyle(color: Colors.blue),
+                              "Create new account",
+                              style: TextStyle(color: Colors.blue, fontSize: 16),
                             ),
                           ),
                         ),
@@ -199,7 +217,7 @@ class Register extends StatelessWidget {
                           1.8,
                           Text(
                             "Or continue with",
-                            style: TextStyle(color: Colors.grey),
+                            style: TextStyle(color: Colors.blue),
                           ),
                         ),
                         SizedBox(height: 10),
