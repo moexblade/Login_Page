@@ -1,16 +1,35 @@
-# login_ui
+# My Flutter Login App
 
-Flutter UI.
+Welcome to my **Flutter Login App**! 🌟  
+This is an open auth login app featuring a beautifully designed login page with smooth animations and a clean, simple interface that can be implemented in any project.
 
-## Getting Started
+---
 
-This project is a starting point for a Flutter application.
+## Features
 
-A few resources to get you started if this is your first Flutter project:
+- ✨ Animated login page elements
+- 🎨 Simple and attractive color scheme
+- 🖼️ Fully responsive for different screen sizes
+- 📱 Easy-to-use interface
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+---
+
+## Screenshots
+
+### Welcome Page
+![Welcome Page](screenshots/welcome.png)  
+
+### Login Page
+![Login Page](screenshots/login.png)  
+
+### Registration Page
+![Registration Page](screenshots/register.png)  
+
+---
+
+## Installation
+
+1. Clone the repository:
+```bash
+git clone https://github.com/your-username/your-repo.git
