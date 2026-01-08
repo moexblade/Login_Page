@@ -32,4 +32,4 @@ This is an open auth login app featuring a beautifully designed login page with 
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/your-username/your-repo.git
+git clone https://github.com/moexblade/Login_Page.git
