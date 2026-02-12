@@ -47,7 +47,7 @@ class Register extends StatelessWidget {
             "Return",
             style: TextStyle(
               color: Colors.white,
-              fontSize: 20,
+              fontSize: 15,
               fontFamily: 'PlayfairDisplay',
             ),
           ),
